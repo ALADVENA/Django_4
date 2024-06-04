@@ -12,7 +12,7 @@ class Sensor(models.Model):
 
 
 class Measurement(models.Model):
-    temperature = models.FloatField(max_length=60.00, null=False)
+    temperature = models.FloatField(max_length=60, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE, related_name='measurements')
 
